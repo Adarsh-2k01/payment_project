@@ -1,0 +1,67 @@
+<html>
+
+<head>{% load static %}
+<link rel="stylesheet" href="{% static 'css/self.css'%}">
+
+</head>
+
+<body>
+	<div class="t_frame">
+        <a class="cash" href="#">SWIFTCASH</a>
+        <nav class="nav">
+        <a href="/select/">HOME</a>
+        <a href="/LS/">LOG-OUT</a>
+        <a href="/contact/">CONTACT US</a>
+        </nav>
+    </div><br><br><button onclick="window.location.reload()">refresh</button>
+<div class="title"><h1>BANK_DETAILS</h1></div>
+	<div class="form_details">
+		<form name="bd" method="post" action="">
+			{% csrf_token %}
+						
+			<div class="form_row1">
+				
+				<input type="number" name="from_acc" minlength="16" maxlength="16"placeholder="account_no"
+				oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+
+				<input type="text" name="branch" placeholder="branch" required>
+	
+				<input type="number" name="branch_code" minlength="7" maxlength="10"placeholder="brach_code"
+				oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+				
+			</div>
+
+			<div class="form_row2">
+
+				<input type="text" name="payee_name" placeholder="payee_name" required>
+
+				<input type="number" name="payee_acc" minlength="16" maxlength="16"placeholder="payee_acc" 
+				oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"required>
+	
+				<input type="number" name="cif" minlength="7" maxlength="10"placeholder="ifsc"
+				oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+	
+				<input type="date" name="date" placeholder="date" required>
+			
+				
+			</div>
+
+			<div class="form_row3">
+			
+				<input type="number" name="amount" minlength="3" maxlength="10"placeholder="amount"
+				oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+	
+				<input type="number" name="ph_no" minlength="10" maxlength="10"placeholder="ph_no"
+				oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+				
+
+			</div>	
+			<input type="submit" >
+			<button id="prev"><a href="/bank">BACK</a></button>
+		</form>
+	</div>
+
+
+
+</body>
+</html>

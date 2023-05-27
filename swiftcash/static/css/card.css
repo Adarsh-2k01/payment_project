@@ -1,0 +1,111 @@
+body{
+min-height:100vh;background:linear-gradient(to right,#000324,#04457e);
+}
+.error{
+border:2px solid red;
+}
+.error_message{gap:0;}
+.error_message::after{
+content:"cant be blank";color:red;margin-top:2rem;
+}
+.container{
+display:flex;align-items:center;
+}
+.left_section{
+min-height:100vh;width:40%;background-image: url("bg-main-desktop.jpg");background-position:center center;
+background-size:cover;background-repeat:no-repeat;position:relative;
+}
+.cards{
+position:absolute;top:50%;display:flex;flex-direction:column;gap:2rem;left:100%;transform:translate(-50%,-50%);
+}
+.front_card{
+position:relative;transform:translate(-100px);
+}
+.card_logo{position:absolute;top:1rem;}
+#number{
+position:absolute;color:White;bottom:7rem;left:1rem;letter-spacing:2px;
+}
+.card_info{
+position:absolute;bottom:2rem;left:1rem;right:3rem;display:flex;color:white;justify-content:space-between;
+}
+.back_card{
+position:relative;
+}
+#cvv{
+position:absolute;top:4.5rem;left:2rem;color:Ligth-grayish-violet;
+}
+.right_section{
+display:flex;align-items:center;justify-content:center;width:100%;
+}
+.right_section form{
+display:grid;gap:1rem;width:350px;grid-template-columns:repeat(2,1fr);
+grid-template-rows:repeat(4,1fr);
+}
+label{
+color: #fff;;margin-bottom:5px;text-transform:uppercase;
+}
+input{
+padding:5px;font-size:18px;border:1px solid Dark-grayish-violet;border-radius:6px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+-webkit-appearance:none;margin:0;
+}
+input::placeholder{
+font-family:inherit;color:Dark-grayish-violet;
+}
+input:focus{
+outline-color:hs1(249,99%,64%);
+}
+.grid_1{
+display:flex;flex-direction:column;grid-column:2 span;
+}
+.grid_2{
+display:flex;flex-direction:column;grid-column:2 span;
+}
+.grid_3{
+display:flex;flex-direction:column;
+}
+.grid_4{
+display:flex;flex-direction:column;grid-column:1 span;
+}
+.card_information{
+display:flex;grid-column:2 span;gap:10px;
+}
+#card_date{
+display:flex;flex-direction:column;grid-column:1 span;
+}
+#card_date .two_inp{display:flex;}
+.two_inp div{flex-direction:column;}
+#card_date div input{
+width:70px;margin-inline:5px;margin-left:0;
+}
+#card_cvv{
+width:100%;}
+form button{
+grid-column:2 span;font-size:18px;height:50px;color:white;border-radius:6px;background-color:black;
+cursor:pointer;
+}
+@media screen and (max-width:1023px){
+.front_card,.fornt_card img,.back_card,.back_card img{width:300px;}
+
+#number{font-size:1.1rem;}
+#cvv{top:45%;right:15%;}
+}
+@media screen and (max-width:770px){
+.container{flex-direction:column;}
+.front_card,.front_card img,back_card,.back_card img{width:300px;}
+.left_section{width:100%;min-height:30vh;}
+.cards{flex-direction:column-reverse;left:65%;gap:0;}
+.back_card{transform:translateY(50px);}
+.front_card{z-index:100;}
+.right_section{margin-top:6rem;}
+#number{top:40%}
+
+}
+a{text-decoration: none;}
+.cash{color:#000000;}
+.t_frame{width:100%;height:20px;background:white;border-radius:9px;margin:0 auto;display:flex;
+            justify-content:space-between;padding:30px;}
+.nav > a {margin-right:40px;color:rgb(0, 0, 0);}
+.nav > a:last-child {margin-right:0px;}

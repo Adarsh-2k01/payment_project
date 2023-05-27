@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>profile</title>
+    </head>
+    <body>
+        <form action="" method="get">
+            <table class=" tabel table-bordered table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>name</th>
+                        <th>login_name</th>
+                        <th>email</th>
+                        <th>phone_number</th>
+                        <th>password</th>
+                        <th>location</th>
+                        <th>adhaar_num</th>
+                        <th>bank_acc</th>
+                        <th>date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for signup in signups %}
+                    <tr>
+                        <td>{{signup.name}}</td>
+                        <td>{{signup.login_name}}</td>
+                        <td>{{signup.email}}</td>
+                        <td>{{signup.phone_number}}</td>
+                        <td>{{signup.password}}</td>
+                        <td>{{signup.location}}</td>
+                        <td>{{signup.adhaar_num}}</td>
+                        <td>{{signup.bank_acc}}</td>
+                        <td>{{signup.date}}</td>
+                    </tr>   
+                    {% endfor %}
+                </tbody>
+               
+            </table>
+        </form>
+    </body>
+</html>

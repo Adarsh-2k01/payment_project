@@ -1,0 +1,82 @@
+<html>
+    <head>{% load static %}
+        <link rel="stylesheet" href="{% static 'css/DTH.css'%}">
+    </head>
+
+<body>
+    <div class="t_frame">
+        <a class="cash" href="#">SWIFTCASH</a>
+        <nav class="nav">
+        <a href="/select/">HOME</a>
+        <a href="/LS/">LOG-OUT</a>
+        <a href="/contact/">CONTACT US</a>
+        </nav>
+    </div><br><br><br>
+
+    <h3>SELECT YOUR SERVICE</h3><hr><br><br>
+    <div class="container">
+        <button id="air"><img src="{% static 'image/air.png'%}" height="100px" width="100px" ></button>
+            <div class="pop">
+                <div class="close-btn">&times;</div>
+                    <div class="pay"> 
+		                <form method="post">{% csrf_token %}
+                            <input type="number" name="cus_id" placeholder="customer-id" minlength="10" maxlength="10"
+                            oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+                        </form>  
+                            <button> <a href="/dth_payment"> proceed</a></button>
+                    </div>
+            </div>
+
+        <button id="tata"><img src="{% static 'image/tata.png'%}" height="100px" width="100px"></button>
+            <div class="pop2">
+                <div class="close-btn2">&times;</div>
+                    <div class="pay">
+                        <form method="post">{% csrf_token %}
+                            <input type="number" name="cus_id" placeholder="customer-id" minlength="10" maxlength="10"
+                            oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+                        </form>
+                        <button> <a href="/dth_payment"> proceed</a></button>
+                    </div>
+            </div>
+
+        <button id="dishtv"><img src="{% static 'image/dishtv.png'%}" height="100px" width="100px"></button>
+            <div class="pop3">
+                <div class="close-btn3">&times;</div>
+                    <div class="pay">
+                        <form method="post">{% csrf_token %}
+                            <input type="number" name="cus_id" placeholder="customer-id" minlength="10" maxlength="10"
+                            oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+                        </form>
+                            <button> <a href="/dth_payment"> proceed</a></button>
+                    </div>
+            </div>
+                    
+            <button id="sun"><img src="{% static 'image/sun.jpg'%}" height="100px" width="100px"></button>
+                <div class="pop4">
+                    <div class="close-btn4">&times;</div>
+                            <div class="pay">
+                                <form method="post">{% csrf_token %}
+                                    <input type="number" name="cus_id" placeholder="customer-id" minlength="10" maxlength="10"
+                                    oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+                                </form>
+                                <button> <a href="/dth_payment"> proceed</a></button>
+                            </div>
+                </div>
+                    
+            <button id="d2h"><img src="{% static 'image/d2h.jpg'%}" height="100px" width="100px"></button>
+                <div class="pop5">
+                    <div class="close-btn5">&times;</div>
+                            <div class="pay">
+                                <form method="post">{% csrf_token %}
+                                    <input type="number" name="cus_id" placeholder="customer-id" minlength="10" maxlength="10"
+                                    oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+                                </form>
+                                <button> <a href="/dth_payment"> proceed</a></button>
+                            </div>
+                </div>
+                <button id="prev"><a href="/select">BACK</a></button>  
+        </div>
+       <script src="{% static 'js/DTH.js'%}"></script>
+ 
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bank.css'%}">
+
+</head>
+<body>
+	<div class="t_frame">
+        <a class="cash" href="#">SWIFTCASH</a>
+        <nav class="nav">
+        <a href="/select/">HOME</a>
+        <a href="/LS/">LOG-OUT</a>
+        <a href="/contact/">CONTACT US</a>
+        </nav>
+    </div><br><br>
+
+<div class="center" >
+	<div class="form">
+		<h1>SELECT BANK FOR YOUR TRANSACTION!</h1>
+		<div class="form-element">
+			<form action="" method="post" name="s_form">{% csrf_token %}
+			<table>
+			<tr><td><input type="radio" name="bank">sbi</td></tr>
+			<tr><td><input type="radio" name="bank">IOB</td></tr>
+			<tr><td><input type="radio" name="bank">TMB</td></tr>
+			<tr><td><input type="radio" name="bank">HDFC</td></tr>
+			</table >
+			</form>
+		</div>
+		<button id="show-login"  onclick="return check()">proceed</button>
+		<button id="prev"><a href="/select">BACK</a></button>
+	</div>
+
+</div>
+
+<div class="user">
+<div id="show-login">
+	<div class="close-btn">&times;</div>
+	<form name="user_id">
+	<div class="name">
+		<label for="name">username</label>
+		<input type="text" name="name" required>
+	</div>
+	<div class="phno">
+		<label for="num">ph.no</label>
+		<input type="number" name="num" minlength="10" maxlength="10" 
+		oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+	</div>
+	<div class="pass">
+		<label for="password">password</label>
+		<input type="password" name="pin" minlength="6"  required>
+	</div>
+	</form>
+	<button id="show-details" ><a href="/form_fillup" onclick="return user()">proceed</a></button>
+
+</div>
+</div>
+<script src="{% static 'js/bank.js'%}"></script>
+</body>
+
+</html>

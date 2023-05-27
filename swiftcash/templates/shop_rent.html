@@ -1,0 +1,40 @@
+<html>
+<head>{% load static %}
+<link rel="stylesheet" href="{% static 'css/shop_rent.css'%}">
+</head>
+<body>
+	<div class="t_frame">
+        <a class="cash" href="#">SWIFTCASH</a>
+        <nav class="nav">
+        <a href="/select/">HOME</a>
+        <a href="/LS/">LOG-OUT</a>
+        <a href="/contact/">CONTACT US</a>
+        </nav>
+    </div><br><br>
+<br>
+<br>
+<h2>Add landowner details..</h2><hr>
+<br>
+<h3>Bank A/c.</h3><br>
+<div class="content">
+
+<form method="post">{% csrf_token %}
+            <select name="Bank" id="">
+                <option value="sbi">SBI</option>
+                <option value="iob">IOB</option>
+            </select><br>
+	<input type="number" name="bank_acc" minlength="16" maxlength="16"placeholder="ENTER BANK ACC NUMBER"
+    oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required><br>
+	<input type="number" name="bank_ifsc" minlength="7" maxlength="10"placeholder="ENTER IFSC CODE" 
+    oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"required><br>
+	<input type="text" name="acc_name" placeholder="ENTER YOUR NAME" required><br>
+	<input type="number" name="ph_no" minlength="10" maxlength="10"placeholder="ENTER PH_NO"
+    oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required><br>
+	<button id="prev"><a href="/rent">BACK</a></button>
+	<input type="submit" >
+
+</form>
+
+</div>
+</body>
+</html>

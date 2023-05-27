@@ -1,0 +1,209 @@
+<html>
+    <style>
+        .container{height: 300px;width: 160px;display: flex;flex-direction: row;
+            overflow-y: scroll;}
+        
+    </style>
+    <body>
+        <div class="container">
+            <div class="img" >
+                <img src="air.png" height="100px" width="100px">
+                <img src="airtels.png" height="100px" width="100px">
+           
+                <img src="bars-solid.svg" height="100px" width="100px">
+            </div>
+            <div class="img1">
+                <img src="air.png" height="100px" width="100px">
+                <img src="airtels.png" height="100px" width="100px">
+                <img src="bars-solid.svg" height="100px" width="100px">
+     
+            </div>
+
+
+            <input type="text" name="{{form.name}}" id="1" placeholder="NAME">
+                                    
+            <input type="text" name="{{form.login_name}}" id="2" placeholder="LOGIN-NAME">
+            
+            <input type="password" name="{{form.password}}" id="3" placeholder="PASSWORD">
+            
+            <input type="email" name="{{form.email}}" id="4" placeholder="EMAIL">
+            
+
+            
+            <input type="text" name="{{form.phone_number}}" id="11" placeholder="PHONE NUMBER">
+            
+            <input type="date" name="{{form.date}}" id="d" placeholder="DATE">
+            
+
+            
+            <input type="text" name="{{form.location}}" id="10" placeholder="LOCATION">
+            
+            <input type="text" name="{{form.adhaar_num}}" placeholder="adhaar number">
+            
+            <input type="text" name="{{form.bank_acc}}" placeholder="bank-account-number">
+        </div>
+    </body>
+</html>
+
+
+class login_details(models.Model):
+    login_name   = models.CharField(max_length=20)
+    password     = models.CharField(max_length=20)
+    class Meta:
+        db_table='login_table'
+
+<table>
+    <tr><td>{{form.name}}</td></tr>
+    <tr><td>{{form.login_name}}</td></tr>
+    <tr><td>{{form.email}}</td></tr>
+    <tr><td>{{form.phone_number}}</td></tr>
+    <tr><td>{{form.password}}</td></tr>
+    <tr><td>{{form.date}}</td></tr>
+    <tr><td>{{form.adhaar_num}}</td></tr>
+    <tr><td>{{form.location}}</td></tr>
+    <tr><td>{{form.bank_acc}}</td></tr>
+   
+</table>
+
+
+form = myform(request.POST)
+if form.is_valid():
+    try:
+        form.save()
+        return redirect("/select")  
+    except Exception as e:
+        html="<html><body><h3>%s</h3></body></html>"%e
+        return HttpResponse(html)
+else:
+form=myform()
+form=myform()
+return render (request,'signup.html',{'form':'form'})
+
+
+if request.POST.get('name') and request.POST.get('login_name') and request.POST.get('email') and request.POST.get('phone_number') and request.POST.get('password') and  request.POST.get('location') and request.POST.get('adhaar_num') and request.POST.get('bank_acc') and request.POST.get('date'):
+saverecord=Myform()
+saverecord.name=request.POST.get('name')
+saverecord.login_name=request.POST.get('login_name')
+saverecord.email=request.POST.get('email')
+saverecord.phone_number=request.POST.get('phone_number')
+saverecord.password=request.POST.get('password')
+saverecord.location=request.POST.get('location')
+saverecord.adhaar_num=request.POST.get('adhaar_num')
+saverecord.bank_acc=request.POST.get('bank_acc')
+saverecord.date=request.POST.get('date')
+saverecord.save()
+return redirect('/select')
+else:
+return render(request,'signup.html')
+
+<button ><a href="/otp"  onclick="return check()">GET-OTP</a></button>
+
+
+
+if request.method == "POST":
+if request.POST.get('from_acc') and request.POST.get('to_acc') and request.POST.get('branch') and request.POST.get('branch_code') and request.POST.get('payee_name') and  request.POST.get('payee_acc') and request.POST.get('cif') and request.POST.get('date') and request.POST.get('amount') and request.POST.get('ph_no'):        
+    saverecord=bank_details()
+    saverecord.from_acc=request.POST.get('from_acc')
+    saverecord.to_acc=request.POST.get('to_acc')
+    saverecord.branch=request.POST.get('branch')
+    saverecord.branch_code=request.POST.get('branch_code')
+    saverecord.payee_name=request.POST.get('payee_name')
+    saverecord.payee_acc=request.POST.get('payee_acc')
+    saverecord.cif=request.POST.get('cif')
+    saverecord.date=request.POST.get('date')
+    saverecord.amount=request.POST.get('amount')
+    saverecord.ph_no=request.POST.get('ph_no')
+    saverecord.save()
+    return redirect('/otp')
+
+    <div class="form_row1">
+        <div >
+        <label for="FROM_ACCOUNT" >FROM_ACCOUNT</label>
+        <input type="text" id="f_acc" name="from_acc">
+        </div>
+
+        <div>
+        <label for="TO_ACCOUNT" >TO_ACCOUNT</label>
+        <input type="text" id="t_acc" name="to_acc">
+        </div>
+
+        <div>
+        <label for="BRANCH" >BRANCH</label>
+        <input type="text" id="b_n" name="branch">
+        </div>
+
+        <div>
+        <label for="BRANCH-CODE" >BRANCH-CODE</label>
+        <input type="text" id="b_c" name="branch_code">
+        </div>
+    </div>
+
+    <div class="form_row2">
+        <div>
+        <label for="PAYEE_NAME" >PAYEE_NAME</label>
+        <input type="text" id="name" name="payee_name">
+        </div>
+
+        <div>
+        <label for="PAYEE_ACC" >PAYEE_ACC_NO</label>
+        <input type="text" id="p_acc" name="payee_acc">
+        </div>
+
+        <div>
+        <label for="CIF" >CIF_NO</label>
+        <input type="text" id="cif" name="cif">
+        </div>
+
+        <div>
+        <label for="date" >DATE</label>
+        <input type="date" id="date" name="date">
+        </div>
+        
+    </div>
+
+    <div class="form_row3">
+        <div>
+        <label for="AMOUNT" >AMOUNT</label>
+        <input type="text" id="rs" name="amount">
+        </div>
+
+        <div>
+        <label for="PAYEE_PH_NO" >PAYEE_PH_NO</label>
+        <input type="text" id="num" name="ph_no">
+        </div>
+
+
+        if request.method=="POST":
+        from_acc    = request.POST['from_acc'];
+        to_acc      = request.POST['to_acc'];
+        branch      = request.POST['branch'];
+        branch_code = request.POST['branch_code'];
+        payee_name  = request.POST['payee_name'];
+        payee_acc   = request.POST['payee_acc'];
+        cif         = request.POST['cif'];
+        date        = request.POST['date'];
+        amount      = request.POST['amount'];
+        ph_no       = request.POST['ph_no'];
+        saverecord=bank_details(from_acc=from_acc,to_acc=to_acc,branch=branch,branch_code=branch_code,payee_name=payee_name,payee_acc=payee_acc,cif=cif,date=date,amount=amount,ph_no=ph_no);
+        saverecord.save();
+        return redirect('/otp');
+    else:
+        return render(request,'form_fillup.html')
+
+
+
+
+
+
+
+
+        if request.method=="POST":
+        try:
+            login_name=request.POST.get("login_name")
+            signups=Myform.objects.get(login_name=login_name)
+            return render(request,'select.html',{'signups':b})
+        except:
+            c="sorry something went wrong.."
+            return render(request,'select.html',{"c":c})
+    else:
+         return render(request,'select.html')

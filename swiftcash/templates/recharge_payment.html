@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>DTH-PAYMENT</title>{% load static %}
+      <link rel="stylesheet" href="{% static 'css/recharge-payment.css'%}">
+
+    </head>
+    <body>
+        <div class="container">
+            <h2>Best offer for you</h2>
+            <form action="" method="post">{% csrf_token %}
+                <form action="" method="post"><br><br><br><br>{% csrf_token %}
+                    <input type="number" name="amount" value="0" placeholder="enter amount you need">
+                            <select name="Pack">
+                                <option value="EC">EC</option>
+                                <option value="549=UL Call 2GB/D,56D">549=UL Call 2GB/D,56D</option>
+                                <option value="65=4GB,existingpack">65=4GB,existingpack</option>
+                                <option value="479=UL Call 1.5GB/D,56D">479=UL Call 1.5GB/D,56D</option>
+                                <option value="359=UL Call 2GB/D,28D">359=UL Call 2GB/D,28D.</option>
+                                <option value="2999=UL Call 2GB/D,1Y">2999=UL Call 2GB/D,1Y</option>
+                                <option value="839=UL Call 2GB/D,84D">839=UL Call 2GB/D,84D</option>
+                                <option value="299=UL Call 2GB/D,28D">299=UL Call 2GB/D,28D</option>
+                                <option value="719=UL Call 1.5GB/D,84D">719=UL Call 1.5GB/D,84D</option>
+                            </select>
+                            
+                            <input type="submit" value="submit">
+                           <button id="prev"><a href="/Recharge">BACK</a></button>
+                </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+	<head>{%load static%}
+	<link rel="stylesheet" href="{% static 'css/card.css' %}">
+
+	</head>
+	<body>
+		<div class="t_frame">
+			<a class="cash" href="#">SWIFTCASH</a>
+			<nav class="nav">
+			<a href="/select/">HOME</a>
+			<a href="/LS/">LOGIN-OUT</a>
+			<a href="/contact/">CONTACT US</a>
+			</nav>
+		</div><br><br>
+	
+		<div class="container">
+		    <div class="left_section">
+				<div class="cards">
+			      	<div class="front_card">
+						<img src="{% static 'image/bg-card-front.png' %}">
+						<div class="card_container">
+				     
+				       		<h1 id="number">0000 0000 0000 0000</h1>
+				       			<div class="card_info">
+				              		<span id="name">swiftcash</span>
+				              		<span id="date">
+				                  		<span id="month">00</span>
+					     /
+				                   		<span id="year">00</span>
+				              		</span>
+				       			</div>
+						</div>	     
+			       </div>
+			       <div class="back_card">
+			            <img src="{% static 'image/bg-card-back.jpg' %}">
+			            <span id="cvv" >000</span>
+			      	</div>
+				</div>
+		    </div>
+		    <div class="right_section">
+                <form method="post" action="">{% csrf_token %}
+					<div class="grid_1">
+			      		<label for="card_name">Cardholder Name</label>
+			      		<input type="text" placeholder="swiftcash" id="card_name" name="name" required>
+			</div>
+			<div class="grid_2">
+			      <label for="card_number">Cardnumber</label>
+			      <input type="number" placeholder="0000 0000 0000 0000" id="card_number" name="number"
+				oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+				minlength="16" maxlength="16" required>
+			</div>
+			<div class="card_information">
+			     <div id="card_date">
+			          <label for="card_date">Exp.Date (MM/YY)</label>
+			          <div class="two_inp">
+				<div>
+				    <input type="number" placeholder="MM" minlength="2" maxlength="2" id="card_month" name="month"
+				       oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+				</div>
+				<div>
+				    <input type="number" placeholder="YY" minlength="2" maxlength="2" id="card_year" name="year"
+				       oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+				</div>
+			          </div>
+			     </div>
+			     <div class="grid_4">
+			           <label for="card_cvv">cvv</label>
+			           <input type="number" placeholder="123" minlength="3" maxlength="3" id="card_cvv" name="cvv"
+ 				oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+			     </div>
+			</div>
+			<input type="submit" id="submit_btn" onclick="return handlesubmit(e)">
+			<button id="prev"><a href="/select">BACK</a></button>
+		            </form>	
+		      </div>
+		</div>
+		<script src="{% static 'js/cardjs.js'%}"></script>
+	</body>
+</html>

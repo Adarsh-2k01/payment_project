@@ -1,0 +1,13 @@
+.main_frame{height:8cm;width:12cm;margin-left:4cm;margin-top:5cm;}
+
+body{background:linear-gradient(to right,#3a7bd5,#3a6073);font-family:"Raleway",sans-serif;height: 100vh;}
+
+.c{margin-left: 600px;margin-top: -325px;}
+.d{margin-left: 1000px;margin-top:-250px;}
+
+td {font-size:18px;color:#222;}
+td input[type="text"],
+input[type="password"]{margin-top:5px;margin-left:0px;display:block;width:200px;padding:10px;outline:none;
+             border:1px solid #aaa;border-radius:5px;}
+button{padding:10px 20px;font-size:15px;font-weight:600;color:#222;background:#f5f5f5;border:none;outline:none;
+     cursor:pointer;border-radius:5px;}

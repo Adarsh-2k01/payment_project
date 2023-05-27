@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Electricity-Bills</title>{% load static %}
+        <link rel="stylesheet" href="{% static 'css/EB.css'%}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="cls">
+                <form method="post" name="e">{% csrf_token %}
+                    <select name="state" id="" >
+                        <option value="tn">TAMILNADU</option>
+                        <option value="kl">KERELA</option>
+                        <option value="ka">KARNATAKA</option>
+                        <option value="an">ANDHRA_PRADESH</option>
+                    </select>
+
+                    <input type="number" name="EB" id="eb" placeholder="consumer-number" minlength="11" maxlength="11"
+                    oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+              
+                <button type="submit" onclick="return valid()">proceed</button>
+            </form>
+            </div>
+            <button id="prev"><a href="/select">BACK</a></button>
+        </div>
+    </body>
+    <script>
+        function valid(){
+            var eb=document.e.eb.value;
+            if (eb=="1111111"||eb=="2222222"||eb=="3333333"||eb=="4444444"||eb=="5555555"||eb=="6666666"||eb=="7777777"||
+            eb=="888888"||eb=="9999999"||eb=="0000000"||eb=="1234567"||eb=="2345678"||eb=="3456789"||eb=="4567890"||eb=="0987654"||
+            eb=="9876543"||eb=="8765432"||eb=="7654321"||eb=="6543212"||eb=="7890098"||eb=="2468097"){
+                alert("there is no pending")
+                return false;
+            }
+        }
+    </script>
+</html>

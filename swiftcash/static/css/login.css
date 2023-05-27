@@ -1,0 +1,39 @@
+* {margin:0px;padding:0px;box-sizing:border-box;}
+a{text-decoration: none;color: rgb(255, 255, 255);font-size: medium;font-weight: 50;}
+
+.title{background-color: rgb(255, 255, 255);
+    width: 1440px;height: 2cm;margin-top: -20px;}
+
+
+
+#swift{padding-top: 20px;padding-left: 50px;}
+
+
+body{background:linear-gradient(to right,#7776e9,#070842);font-family:"Raleway",sans-serif;height: 100vh;}
+
+.main{background-color: #fff;height: 400px;width: 450px;
+margin-left: 490px;margin-top: 150px;align-items: center;border-radius: 10px;}
+
+
+
+
+
+.user input[type="text"]{margin-top: 30px;width: 80%;padding: 10px;outline:none;
+    border: 1px solid #aaa;border-radius: 5px;border-radius: 200px;margin-left: 40px;}
+input[type="password"]{margin-top:30px;display:block;width:80%;padding:10px;outline:none;
+         border:1px solid #aaa;border-radius:5px;border-radius:200px;margin-left: 40px;}
+#log{width: 80%;border-radius: 200px;margin-left: 40px;height: 40px;margin-top: 30px;border: 1px outset #aaa;
+    outline: none; background:linear-gradient(to right,rgb(0, 81, 255),rgb(212, 0, 255));color: black;}
+
+
+
+
+
+
+
+.signup{margin-top:150px;}
+.signup button{height: 30px;width: 80px;margin-left: 300px;margin-top: -25px;border-radius: 10px;background:rgb(255, 255, 255);
+                border:1px outset black;color: rgb(0, 0, 0);}
+
+.signup button:hover{height: 30px;width: 80px;margin-left: 300px;margin-top: -25px;border-radius: 10px;background:rgb(0, 0, 0);
+                    border:1px outset black;color: rgb(255, 255, 255);}

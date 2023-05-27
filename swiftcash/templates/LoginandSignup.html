@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>{% load static %}
+<link rel="stylesheet" href="{% static 'css/ls.css' %}">
+</head>
+<body>
+	<div class="container">
+		<div class="forms">
+			<div class="signin_up">
+				<form class="sign-in-form" method="post" enctype="mutipart/form-data">{% csrf_token %}
+					<h2>SIGN-IN</h2>
+					<div class="input_field">
+						<img src="{%static 'image/user-solid.svg'%}" height="15px" weight="15px">
+						<td><input type="text" name="login_name" placeholder="xxxxxxx" required><br>
+						<span id="a" style="color: red;font-size:medium;">{{a}}</span></td>
+					</div><br><br>
+					<div class="input_field">
+						<img src="{%static 'image/lock-solid.svg'%}" height="15px" weight="15px">
+						<input type="password" name="password" placeholder="xxxxxxx" 
+						minlength="6" required>
+					</div>
+						<input type="submit" class="btn">
+				</form>
+		
+				<form action="" method="post" class="sign-up-form"  enctype="mutipart/form-data">{% csrf_token %}
+					<h2>SIGN-UP</h2>
+					<div class="input_field">
+						<img src="{%static 'image/user-solid.svg'%}" height="15px" weight="15px">
+						<input type="text" name="name" id="1" placeholder="NAME" required>
+					</div>
+					<div class="input_field">   
+						<img src="{%static 'image/user-solid.svg'%}" height="15px" weight="15px">                                 
+						<input type="text" name="login_name" id="2" placeholder="LOGIN-NAME" required>
+					</div>
+					<div class="input_field">  
+						<img src="{%static 'image/user-solid.svg'%}" height="15px" weight="15px">   
+						<input type="email" name="email" id="4" placeholder="EMAIL" required>
+					</div>
+					<div class="input_field"> 
+						<img src="{%static 'image/phone-solid.svg'%}" height="15px" weight="15px">    
+						<input type="number" name="phone_number" id="11" placeholder="PHONE NUMBER" 
+						minlength="10" maxlength="10" oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+					</div>
+					<div class="input_field">     
+						<img src="{%static 'image/lock-solid.svg'%}" height="15px" weight="15px">         
+						<input type="password" name="password" id="3" placeholder="PASSWORD" 
+						minlength="6" required>
+					</div>
+					<div class="input_field">
+						<img src="{%static 'image/user-solid.svg'%}" height="15px" weight="15px">
+						<select name="Gender" id="">
+							<option value="male">male</option>
+							<option value="female">female</option>
+						</select>
+					</div>
+					<div class="input_field">     
+						<img src="{%static 'image/user-solid.svg'%}" height="15px" weight="15px">         
+						<input type="text" name="location" id="10" placeholder="LOCATION" required>
+					</div>
+					<div class="input_field">  
+						<img src="{%static 'image/user-solid.svg'%}" height="15px" weight="15px">          
+						<input type="number" name="adhaar_num" placeholder="adhaar number"
+						minlength="16" maxlength="16" oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+					</div>
+					<div class="input_field">    
+						<img src="{% static 'image/building-columns-solid.svg'%}" height="15px" weight="15px">         
+						<input type="number" name="bank_acc" placeholder="bank-account-number"
+						minlength="16" maxlength="16" oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+					</div>
+					<div class="input_field">  
+						<img src="{% static 'image/user-solid.svg'%}" height="15px" weight="15px">             
+						<input type="date" name="date" id="d" placeholder="DATE" required>    
+					</div>
+					<input type="submit" class="btn" >   
+				</form>
+					
+			</div>
+		</div>
+		<div class="panel_container">
+			<div class="panel left_panel">
+				<div class="content">
+					<h3>New here?</h3>
+					<h4>click here to continue your sign-up process by entering your details.............. </h4>
+					<button class="btn_transparent" id="signupbtn">Sign-up</button>
+				</div>
+			
+			</div>
+			<div class="panel right_panel">
+				<div class="content">
+					<h3>One of us?</h3>
+					<h4>if you already one of us then you can sign-in here............</h4>
+					<button class="btn_transparent" id="signinbtn">Sign-in</button>
+				</div>
+				<img src="{% static 'image/l-imgs.png' %}" class="image">
+			</div>
+		</div>
+   	</div>
+   	<script src="{%static 'js/loginandsignup.js' %}"></script>       
+</body>
+
+</html>

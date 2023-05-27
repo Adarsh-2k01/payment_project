@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>RECHARGE</title>{% load static %}
+        <link rel="stylesheet" href="{% static 'css/recharge.css'%}">
+    </head>
+    <body>
+<div class="t_frame">
+	<a class="cash" href="#">SWIFTCASH</a>
+	<nav class="nav">
+	<a href="/select/">HOME</a>
+	<a href="/LS/">LOG-OUT</a>
+	<a href="/contact/">CONTACT US</a>
+	</nav>
+</div><br><br><br>
+            <h3>SELECT YOUR SERVICE</h3>
+        <div class="container">
+
+            
+                 <button id="air"><img src="{% static 'image/airtels.png'%}" height="100px" width="100px" ></button>
+                     <div class="pop">
+                         <div class="close-btn">&times;</div>
+                                 <div class="pay">
+                                    <form>
+                                     <input type="number" placeholder="customer-id" minlength="10" maxlength="10"
+                                     oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+                                     <button> <a href="/recharge_payment"> proceed</a></button>
+                                    </form>
+                                 </div>
+                     </div>
+
+                     <button id="jio"><img src="{% static 'image/jio.png'%}" height="100px" width="100px" ></button>
+                     <div class="pop2">
+                         <div class="close-btn2">&times;</div>
+                                 <div class="pay">
+                                    <form>
+                                     <input type="number" placeholder="customer-id" minlength="10" maxlength="10"
+                                     oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+                                     <button> <a href="/recharge_payment"> proceed</a></button>
+                                     </form>
+                                 </div>
+                     </div>
+
+                     <button id="bsnl"><img src="{% static 'image/BSNL.jpg'%}" height="100px" width="100px" ></button>
+                     <div class="pop3">
+                         <div class="close-btn3">&times;</div>
+                                 <div class="pay">
+                                    <form>
+                                     <input type="number" placeholder="customer-id" minlength="10" maxlength="10"
+                                     oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)" required>
+                                     <button> <a href="/recharge_payment"> proceed</a></button>
+                                    </form>
+                                 </div>
+                     </div>
+                     <button id="prev"><a href="/select">BACK</a></button>
+   
+        <script src="{% static 'js/Recharge.js'%}"></script>
+    </body>
+</html>

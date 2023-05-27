@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>SWIFTCASH</title>{%load static%}
+        <link rel="stylesheet" href="{%static 'css/select.css'%}">
+    </head>
+    <body>
+        <div class="t_frame">
+            <a class="cash" href="#">SWIFTCASH</a>
+            <nav class="nav">
+            <a href="/select/">HOME</a>
+            <a href="/LS/">LOG-OUT</a>
+            <div class="con">
+                <span id="con1">contact</span>
+                <span><a href="/contact"><img src="{%static 'image/address-book-solid.svg'%}" height="25px" width="25px"></a></span>
+            </div>   
+            </nav>
+        </div><br><br><br>
+
+        <div class="m_frame">
+	<div class="box1">
+        <br><h2 id="bill">SWIFTCASH</h2><hr><br>
+
+        <h4>Consumers expect a
+            safe, convenient, and affordable globalised payment platform.</h4><br><br>
+        <h4>The advantage of online banking is that you can pay bills superfast, and your account is automatically credited or debited for each deposit and payment, making it easier to stay on track.</h4>
+	</div>
+
+            <div class="moneytransfer"> 
+
+	<br><h2  id="bill">Money Transfer</h2><hr><br>
+	<pre><p>=> Bank to Bank......</p>
+	         <p>=> Self Bank......</p></pre><br>
+                <button id="money_transfer">Click</button>
+                <div class="pop">
+                    <div class="close-btn">&times;</div>
+	        <h2>Money Transfer...</h2><hr><br>
+                     <div class="money">  
+                        <div class="bank"> 
+                            <span id="b">bank to bank transfer here....</span>
+                            <span><a href="/bank"><img src="{%static 'image/building-columns-solid.svg'%}" height="80px" width="80px"><h4></h4></a></span>
+                        </div>
+                        <div class="bank"> 
+                            <span id="b">self bank transfer here....</span>
+                            <span><a href="/selfbank"><img src="{%static 'image/building-columns-solid.svg'%}" height="80px" width="80px"><h4></h4></a></span>
+                        </div>
+	         </div>	
+                </div>
+            </div>
+
+            <div class="bills-and-rec"> 
+	<br><h2  id="bill">Recharge and Bill Payment</h2><hr><br>
+	<pre><p>=> Electricity Bills......</p>
+	         <p>=> Credit Card Bills......</p>
+	         <p>=> Recharges (DTH,Mobiles)......</p>
+	         <p>=> Credit Card payment......</p></pre><br>
+                <button id="bills">click</button>
+                <div class="pop2">
+                    <div class="close-btn2">&times;</div>
+		<h2>Bill payments</h2><hr><br>
+                       <div class="bill">
+		
+                           <div class="EB"> 
+                            <span id="eb">Electricity-Bills</span>
+                            <span><a href="/EB"><img src="{%static 'image/tower-cell-solid.svg'%}" height="80px" width="80px"><h4></h4></a></span>
+                           </div>
+		 <div class="c">
+                               <span id="cd">credit card bills</span> 
+                               <span><a href="/rent"><img src="{%static 'image/credit-card-solid.svg'%}" height="80px" width="80px"><h4></h4></a></span>
+                            </div>
+	           </div><br><br>
+		<h2>Recharge payment</h2><hr><br>
+	           <div class="rec">
+		
+                            <div class="DTH">
+                               <span id="dth">DTH-Recharge</span> 
+                                <span><a href="/DTH"><img src="{%static 'image/satellite-dish-solid.svg'%}" height="80px" width="80px"><h4></h4></a></span>
+                               </div>
+
+                               <div class="Recharge">
+                                <span id="rec">Recharge</span> 
+                                <span><a href="/Recharge"><img src="{%static 'image/sim-card-solid.svg'%}" height="80px" width="80px"><h4></h4></a></span>
+		    </div>
+                        </div><br><br>
+		<h2>Credit card payment</h2><hr><br>
+	           <div class="c">
+                            <span id="cd">credit pay here..</span> 
+                            <span><a href="/card"><img src="{%static 'image/credit-card-solid.svg'%}" height="80px" width="80px"><h4></h4></a></span>
+                        </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+
+        
+
+
+        <script src="{% static 'js/select.js' %}"></script>
+    </body>
+</html>

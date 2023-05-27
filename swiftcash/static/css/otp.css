@@ -1,0 +1,10 @@
+* {margin:0px;padding:0px;box-sizing:border-box;}
+
+body{background:linear-gradient(to right,#3a7bd5,#3a6073);font-family:"Raleway",sans-serif;}
+.pay-recipt{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+.pay-recipt.form{margin:15px 0px;}
+.pay-recipt.form input[type="text"]{margin-top:5px;display:block;width:100px;padding:10px;outline:none;
+					         border:1px solid #aaa;border-radius:5px;}
+.pay-recipt.form button{padding:10px 20px;font-size:15px;font-weight:600;color:#222;background:#f5f5f5;border:none;outline:none;
+	         cursor:pointer;border-radius:5px;}
+a{text-decoration:none;}
